@@ -1,6 +1,42 @@
-const convertToNumbers = (arr) => {
 
+const convertToNumbers = (arr) => {
+    
     // YOUR CODE HERE
+
+    const numberWords = {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9
+    }
+
+    // const returnArray = []
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     const converted = Number(arr[i])
+        
+    //     if (converted) {
+    //         returnArray.push(converted)
+    //     } else {
+    //         const convertedByObject = numberWords[arr[i]]
+    //         if (convertedByObject) {
+
+    //             returnArray.push(convertedByObject)
+
+    //         } else {
+                
+    //             returnArray.push(10)
+
+    //         }
+    //     }
+    // }
+
+    return arr.map(item => Number(item) || numberWords[item] || 10)
 
 }
 
